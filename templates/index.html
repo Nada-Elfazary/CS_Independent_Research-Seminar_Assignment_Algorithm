@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>IW Assignment Interface</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+</style>
+</head>
+<body>
+
+<h1>IW Assignment Page</h1>
+
+<form action="/ilp" method = 'post' enctype="multipart/form-data">
+  <input type="file" id="prefs" name="file">Upload csv file containing student info and preferences</input><br><br>
+  <input type="file" id="sems" name="file">Upload csv file containing seminars and capacities</input><br><br>
+  <label for="sem">Current semester:</label>
+  <select name="sem" id="sem">
+    <option value="Fall">Fall</option>
+    <option value="Spring">Spring</option>
+  </select><br><br>
+<p>Use the below input boxes to manipulate the algorithm's parameters or leave to use the default values</p>
+  <label for="first">1st choice preference weight:</label>
+  <input type="text" id="first" name="first" value = "100"><br><br>
+  <label for="scnd">2nd choice preference weight:</label>
+  <input type="text" id="scnd" name="scnd" value = "30"><br><br>
+  <label for="third">3rd choice preference weight:</label>
+  <input type="text" id="third" name="third" value = "20"><br><br>
+  <label for="lt_third">Below 3rd choice preference weight:</label>
+  <input type="text" id="lt_third" name="lt_third" value = "0"><br><br>
+
+  <label for="threshold">All students should get into one of their top</label> 
+  <input type="text" id="threshold" name="threshold" value = "3">choices<br><br> 
+
+  <p>Would you like to relax the priority constraints?</p>
+  <select name="change-priority" id="change-priority">
+    <option value="yes">Yes</option>
+    <option value="no">No</option>
+  </select><br><br>
+
+
+  If you chose yes, fill out the entries below with the relative 
+  priority you would like to give to the following classes of students.
+  <br>Eg. AB Students: 2, Spring BSE Seniors: 2, All other students: 1
+  means ABs and Spring BSE Seniors will get twice as much priority as all other students.
+  <br><br>
+  <label for="AB-priority">AB Students:</label>
+  <input type="text" id="AB-priority" name="AB-priority" value = "1"><br><br>
+  <label for="BSE-priority">BSE Senior Students in the Spring:</label>
+  <input type="text" id="BSE-priority" name="BSE-priority" value = "1"><br><br>
+  <label for="Base-priority">All other students:</label>
+  <input type="text" id="Base-priority" name="Base-priority" value = "1"><br><br>
+
+  <br><br><input type="submit" value="Submit">
+
+</form>
+
+</body>
+</html>
